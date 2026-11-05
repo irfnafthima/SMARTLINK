@@ -293,7 +293,7 @@ Automated testing was conducted using Pytest across 22 test cases:
 
 ---
 
-## 16. Conclusion
+## 17. Conclusion
 The SmartLink project successfully fulfills all academic and functional requirements:
 1. The luxury Emergent frontend has been preserved and enhanced with complete CRUD capabilities (including animated Edit and Delete Confirmation modals).
 2. A scalable, modular Flask REST API handles business logic, URL lifecycle management, and telemetry logging.
@@ -302,7 +302,7 @@ The SmartLink project successfully fulfills all academic and functional requirem
 
 ---
 
-## 17. Future Enhancements
+## 18. Future Enhancements
 - **QR Code Generation**: Automatically generate SVG QR codes for shortened links.
 - **Geographic IP Telemetry**: Integrate GeoIP2 database lookups to visualize visitor countries on a world map.
 - **Custom Expiration Timers**: Allow users to set TTL (Time-To-Live) on short links.
@@ -310,7 +310,7 @@ The SmartLink project successfully fulfills all academic and functional requirem
 
 ---
 
-## 18. References
+## 19. References
 1. Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. Doctoral dissertation, University of California, Irvine.
 2. Docker Documentation. (2024). *Docker Compose Specification and Networking Guide*. https://docs.docker.com/compose/
 3. Flask Documentation. (2024). *Application Factories and Blueprint Architecture*. Pallets Projects. https://flask.palletsprojects.com/
