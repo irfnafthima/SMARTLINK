@@ -65,6 +65,8 @@ SmartLink couples a high-performance single-page application built on React 19 a
 
 ## 8. System Architecture
 
+![SmartLink System Architecture](docs/screenshots/system-architecture.png)
+
 ```
                     ┌─────────────────────────────────────────┐
                     │               USER BROWSER              │

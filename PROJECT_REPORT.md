@@ -78,6 +78,8 @@ SmartLink adopts a modern cloud-native, three-tier architecture:
 ## 7. System Architecture
 The application runs across three isolated containers connected over a custom bridge network (`smartlink_network`):
 
+![SmartLink System Architecture](docs/screenshots/system-architecture.png)
+
 ```
                    [ Client Web Browser ]
                              │
