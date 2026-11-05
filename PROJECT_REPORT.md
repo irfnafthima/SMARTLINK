@@ -275,16 +275,12 @@ Automated testing was conducted using Pytest across 22 test cases:
 | 3 | **Generated Link** | Success banner with one-click copy functionality | `docs/screenshots/generated-short-link.png` |
 | 4 | **My Links** | Complete library list with search and action buttons | `docs/screenshots/my-links.png` |
 | 5 | **Edit Modal** | Update modal populated with current record values | `docs/screenshots/update-link.png` |
-| 6 | **Updated Link** | Library reflecting modified destination and alias | `docs/screenshots/updated-link.png` |
-| 7 | **Delete Modal** | Confirmation dialog with cancellation support | `docs/screenshots/delete-confirmation.png` |
-| 8 | **Analytics** | Detailed time-series analytics and top performers | `docs/screenshots/analytics.png` |
-| 9 | **Docker Containers** | Container health checks and synchronization | `docs/screenshots/docker-containers.png` |
-| 10 | **MySQL Database** | Stored records and click events in MySQL 8 | `docs/screenshots/database-records.png` |
-| 11 | **Docker Desktop Containers** | Docker Desktop GUI showing running services & ports | `docs/screenshots/docker-desktop-containers.png` |
-| 12 | **Docker Desktop Images** | Docker Desktop GUI showing built images & sizes | `docs/screenshots/docker-desktop-images.png` |
-| 13 | **Docker Desktop Nginx Logs** | Docker Desktop GUI showing live Nginx reverse proxy logs | `docs/screenshots/docker-nginx-logs.png` |
-| 14 | **Docker Orchestration** | CLI service telemetry, image footprint, and memory stats | `docs/screenshots/docker-orchestration.png` |
-| 15 | **Nginx Reverse Proxy** | CLI Nginx config syntax, HTTP 302 routing, and access logs | `docs/screenshots/nginx-reverse-proxy.png` |
+| 6 | **Delete Modal** | Confirmation dialog with cancellation support | `docs/screenshots/delete-confirmation.png` |
+| 7 | **Analytics** | Detailed time-series analytics and top performers | `docs/screenshots/analytics.png` |
+| 8 | **MySQL Database** | Stored records and click events in MySQL 8 | `docs/screenshots/database-records.png` |
+| 9 | **Docker Desktop Containers** | Docker Desktop GUI showing running services & ports | `docs/screenshots/docker-desktop-containers.png` |
+| 10 | **Docker Desktop Images** | Docker Desktop GUI showing built images & sizes | `docs/screenshots/docker-desktop-images.png` |
+| 11 | **Docker Desktop Nginx Logs** | Docker Desktop GUI showing live Nginx reverse proxy logs | `docs/screenshots/docker-nginx-logs.png` |
 
 ---
 

@@ -391,7 +391,7 @@ $env:PYTHONPATH="backend"; pytest backend/tests -v
 ![SmartLink Dashboard](docs/screenshots/dashboard.png)
 *Figure 1: Main Dashboard displaying live metrics, quick shorten bar, real-time Recharts area chart, and recent links.*
 
-### 2. URL Creation Interface
+### 2. URL Creation Interface (Create)
 ![Create Short Link](docs/screenshots/create-short-link.png)
 *Figure 2: URL creation form with destination URL and optional custom alias fields.*
 
@@ -399,53 +399,37 @@ $env:PYTHONPATH="backend"; pytest backend/tests -v
 ![Generated Short Link](docs/screenshots/generated-short-link.png)
 *Figure 3: Animated success banner with generated short link and one-click copy button.*
 
-### 4. My Links Library (Read Operation)
+### 4. My Links Library (Read)
 ![My Links](docs/screenshots/my-links.png)
 *Figure 4: Complete list of stored URLs showing destination, short link, click counts, creation dates, and action controls.*
 
-### 5. Edit Link Modal (Update Operation)
+### 5. Edit Link Modal (Update)
 ![Update Link Modal](docs/screenshots/update-link.png)
 *Figure 5: Animated Edit Link modal populated with existing record values, allowing modification while preserving history.*
 
-### 6. Updated Link Record
-![Updated Link](docs/screenshots/updated-link.png)
-*Figure 6: Link library reflecting successfully updated destination and custom alias.*
-
-### 7. Delete Confirmation Dialog (Delete Operation)
+### 6. Delete Confirmation Dialog (Delete)
 ![Delete Confirmation](docs/screenshots/delete-confirmation.png)
-*Figure 7: Delete Confirmation Dialog prompting the user before permanently removing a URL and cascading click events.*
+*Figure 6: Delete Confirmation Dialog prompting the user before permanently removing a URL and cascading click events.*
 
-### 8. Analytics Overview
+### 7. Analytics Overview
 ![Analytics](docs/screenshots/analytics.png)
-*Figure 8: Performance Analytics displaying total clicks, unique visitors, CTR, time-series chart, and top performing links.*
+*Figure 7: Performance Analytics displaying total clicks, unique visitors, CTR, time-series chart, and top performing links.*
 
-### 9. Docker Container Status
-![Docker Containers](docs/screenshots/docker-containers.png)
-*Figure 9: Terminal verification showing all three containers (frontend, backend, database) healthy and synchronized.*
-
-### 10. MySQL Database Records
+### 8. MySQL Database Records
 ![Database Records](docs/screenshots/database-records.png)
-*Figure 10: Verified MySQL records inside `smartlink_db` demonstrating referential integrity across `urls` and `click_events`.*
+*Figure 8: Verified MySQL records inside `smartlink_db` demonstrating referential integrity across `urls` and `click_events`.*
 
-### 11. Docker Desktop – Running Containers & Ports
+### 9. Docker Desktop – Running Containers & Port Mapping
 ![Docker Desktop Containers](docs/screenshots/docker-desktop-containers.png)
-*Figure 11: Docker Desktop UI displaying the active `docker_smart_url_shortener` stack with running containers: `smartlink_db` (MySQL 8.0), `smartlink_backend` (Flask + Gunicorn), and `smartlink_frontend` (Nginx + React mapped to port 3000:80).*
+*Figure 9: Docker Desktop UI displaying active containers with healthy status: `smartlink_db` (MySQL 8.0), `smartlink_backend` (Flask + Gunicorn), and `smartlink_frontend` (Nginx + React mapped to port 3000:80).*
 
-### 12. Docker Desktop – Built Images & Storage
+### 10. Docker Desktop – Built Production Images
 ![Docker Desktop Images](docs/screenshots/docker-desktop-images.png)
-*Figure 12: Docker Desktop Images dashboard displaying built production images (`docker_smart_url_shortener-frontend: 95.72 MB`, `docker_smart_url_shortener-backend: 291.99 MB`, and `mysql:8.0: 1.1 GB`).*
+*Figure 10: Docker Desktop Images dashboard displaying built production images (`docker_smart_url_shortener-frontend: 95.72 MB`, `docker_smart_url_shortener-backend: 291.99 MB`, and `mysql:8.0: 1.1 GB`).*
 
-### 13. Docker Desktop – Live Nginx Reverse Proxy Logs
+### 11. Docker Desktop – Nginx Reverse Proxy Live Logs
 ![Docker Desktop Nginx Logs](docs/screenshots/docker-nginx-logs.png)
-*Figure 13: Docker Desktop Logs panel showing live Nginx reverse-proxy access logs capturing inbound HTTP requests, routing between `/api/` backend services and frontend static assets.*
-
-### 14. Docker Multi-Container Orchestration & Telemetry (CLI)
-![Docker Orchestration](docs/screenshots/docker-orchestration.png)
-*Figure 14: Docker Compose service health status, container images footprint, and live runtime resource telemetry (CPU, memory, network I/O).*
-
-### 15. Nginx Reverse Proxy & HTTP Routing Verification (CLI)
-![Nginx Reverse Proxy](docs/screenshots/nginx-reverse-proxy.png)
-*Figure 15: Nginx configuration syntax test, live reverse proxying from port 3000 to Flask backend:5000, short link HTTP 302 redirection headers, and real-time access logs.*
+*Figure 11: Docker Desktop Logs panel showing live Nginx reverse-proxy access logs capturing inbound HTTP requests, routing between `/api/` backend services and frontend static assets.*
 
 ---
 
