@@ -1,0 +1,88 @@
+services:
+  # ==========================================
+  # SERVICE 1: FRONTEND (React + Nginx)
+  # ==========================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: smartlink_frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - smartlink_network
+
+  # ==========================================
+  # SERVICE 2: BACKEND (Flask + Gunicorn)
+  # ==========================================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: smartlink_backend
+    restart: unless-stopped
+    expose:
+      - "5000"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-smartlink_db}
+      - MYSQL_USER=${MYSQL_USER:-smartlink_user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-smartlink_password_2024}
+      - DB_HOST=${DB_HOST:-db}
+      - DB_PORT=${DB_PORT:-3306}
+      - SECRET_KEY=${SECRET_KEY:-smartlink-production-secret-key-2024}
+      - BASE_URL=${BASE_URL:-http://localhost:3000}
+      - FLASK_ENV=production
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - smartlink_network
+
+  # ==========================================
+  # SERVICE 3: DATABASE (MySQL 8)
+  # ==========================================
+  db:
+    image: mysql:8.0
+    container_name: smartlink_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-smartlink_db}
+      - MYSQL_USER=${MYSQL_USER:-smartlink_user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-smartlink_password_2024}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-root_secure_password_2024}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u$$MYSQL_USER -p$$MYSQL_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 25s
+    networks:
+      - smartlink_network
+
+# ==========================================
+# PERSISTENT VOLUMES
+# ==========================================
+volumes:
+  mysql_data:
+    name: smartlink_mysql_data
+
+# ==========================================
+# DEDICATED BRIDGE NETWORK
+# ==========================================
+networks:
+  smartlink_network:
+    name: smartlink_network
+    driver: bridge

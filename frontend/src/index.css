@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/jetbrains-mono";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter Variable", sans-serif;
+  --font-heading: "Playfair Display Variable", serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
+  --color-background: #111110;
+  --color-foreground: #f4efe5;
+  --color-border: #38352f;
+  --color-ring: #c6a66b;
+}
+
+* { box-sizing: border-box; }
+html { background: #111110; font-family: "Inter Variable", sans-serif; }
+body { margin: 0; min-width: 320px; background: #111110; color: #f4efe5; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #c6a66b; color: #111110; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
