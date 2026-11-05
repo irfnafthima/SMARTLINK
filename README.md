@@ -427,13 +427,25 @@ $env:PYTHONPATH="backend"; pytest backend/tests -v
 ![Database Records](docs/screenshots/database-records.png)
 *Figure 10: Verified MySQL records inside `smartlink_db` demonstrating referential integrity across `urls` and `click_events`.*
 
-### 11. Docker Multi-Container Orchestration & Telemetry
-![Docker Orchestration](docs/screenshots/docker-orchestration.png)
-*Figure 11: Docker Compose service health status, container images footprint, and live runtime resource telemetry (CPU, memory, network I/O).*
+### 11. Docker Desktop – Running Containers & Ports
+![Docker Desktop Containers](docs/screenshots/docker-desktop-containers.png)
+*Figure 11: Docker Desktop UI displaying the active `docker_smart_url_shortener` stack with running containers: `smartlink_db` (MySQL 8.0), `smartlink_backend` (Flask + Gunicorn), and `smartlink_frontend` (Nginx + React mapped to port 3000:80).*
 
-### 12. Nginx Reverse Proxy & HTTP Routing Verification
+### 12. Docker Desktop – Built Images & Storage
+![Docker Desktop Images](docs/screenshots/docker-desktop-images.png)
+*Figure 12: Docker Desktop Images dashboard displaying built production images (`docker_smart_url_shortener-frontend: 95.72 MB`, `docker_smart_url_shortener-backend: 291.99 MB`, and `mysql:8.0: 1.1 GB`).*
+
+### 13. Docker Desktop – Live Nginx Reverse Proxy Logs
+![Docker Desktop Nginx Logs](docs/screenshots/docker-nginx-logs.png)
+*Figure 13: Docker Desktop Logs panel showing live Nginx reverse-proxy access logs capturing inbound HTTP requests, routing between `/api/` backend services and frontend static assets.*
+
+### 14. Docker Multi-Container Orchestration & Telemetry (CLI)
+![Docker Orchestration](docs/screenshots/docker-orchestration.png)
+*Figure 14: Docker Compose service health status, container images footprint, and live runtime resource telemetry (CPU, memory, network I/O).*
+
+### 15. Nginx Reverse Proxy & HTTP Routing Verification (CLI)
 ![Nginx Reverse Proxy](docs/screenshots/nginx-reverse-proxy.png)
-*Figure 12: Nginx configuration syntax test, live reverse proxying from port 3000 to Flask backend:5000, short link HTTP 302 redirection headers, and real-time access logs.*
+*Figure 15: Nginx configuration syntax test, live reverse proxying from port 3000 to Flask backend:5000, short link HTTP 302 redirection headers, and real-time access logs.*
 
 ---
 

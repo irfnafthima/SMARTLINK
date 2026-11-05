@@ -280,8 +280,11 @@ Automated testing was conducted using Pytest across 22 test cases:
 | 8 | **Analytics** | Detailed time-series analytics and top performers | `docs/screenshots/analytics.png` |
 | 9 | **Docker Containers** | Container health checks and synchronization | `docs/screenshots/docker-containers.png` |
 | 10 | **MySQL Database** | Stored records and click events in MySQL 8 | `docs/screenshots/database-records.png` |
-| 11 | **Docker Orchestration** | Service telemetry, image footprint, and memory stats | `docs/screenshots/docker-orchestration.png` |
-| 12 | **Nginx Reverse Proxy** | Nginx config syntax, HTTP 302 routing, and access logs | `docs/screenshots/nginx-reverse-proxy.png` |
+| 11 | **Docker Desktop Containers** | Docker Desktop GUI showing running services & ports | `docs/screenshots/docker-desktop-containers.png` |
+| 12 | **Docker Desktop Images** | Docker Desktop GUI showing built images & sizes | `docs/screenshots/docker-desktop-images.png` |
+| 13 | **Docker Desktop Nginx Logs** | Docker Desktop GUI showing live Nginx reverse proxy logs | `docs/screenshots/docker-nginx-logs.png` |
+| 14 | **Docker Orchestration** | CLI service telemetry, image footprint, and memory stats | `docs/screenshots/docker-orchestration.png` |
+| 15 | **Nginx Reverse Proxy** | CLI Nginx config syntax, HTTP 302 routing, and access logs | `docs/screenshots/nginx-reverse-proxy.png` |
 
 ---
 
