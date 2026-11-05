@@ -427,6 +427,14 @@ $env:PYTHONPATH="backend"; pytest backend/tests -v
 ![Database Records](docs/screenshots/database-records.png)
 *Figure 10: Verified MySQL records inside `smartlink_db` demonstrating referential integrity across `urls` and `click_events`.*
 
+### 11. Docker Multi-Container Orchestration & Telemetry
+![Docker Orchestration](docs/screenshots/docker-orchestration.png)
+*Figure 11: Docker Compose service health status, container images footprint, and live runtime resource telemetry (CPU, memory, network I/O).*
+
+### 12. Nginx Reverse Proxy & HTTP Routing Verification
+![Nginx Reverse Proxy](docs/screenshots/nginx-reverse-proxy.png)
+*Figure 12: Nginx configuration syntax test, live reverse proxying from port 3000 to Flask backend:5000, short link HTTP 302 redirection headers, and real-time access logs.*
+
 ---
 
 ## 22. Results

@@ -266,7 +266,26 @@ Automated testing was conducted using Pytest across 22 test cases:
 
 ---
 
-## 15. Results
+## 15. Application Verification & Screenshots
+
+| Figure | Component | Description | Screenshot Reference |
+|---|---|---|---|
+| 1 | **Dashboard** | Main dashboard with KPI cards and Recharts analytics | `docs/screenshots/dashboard.png` |
+| 2 | **Create Link** | URL creation form with custom short code input | `docs/screenshots/create-short-link.png` |
+| 3 | **Generated Link** | Success banner with one-click copy functionality | `docs/screenshots/generated-short-link.png` |
+| 4 | **My Links** | Complete library list with search and action buttons | `docs/screenshots/my-links.png` |
+| 5 | **Edit Modal** | Update modal populated with current record values | `docs/screenshots/update-link.png` |
+| 6 | **Updated Link** | Library reflecting modified destination and alias | `docs/screenshots/updated-link.png` |
+| 7 | **Delete Modal** | Confirmation dialog with cancellation support | `docs/screenshots/delete-confirmation.png` |
+| 8 | **Analytics** | Detailed time-series analytics and top performers | `docs/screenshots/analytics.png` |
+| 9 | **Docker Containers** | Container health checks and synchronization | `docs/screenshots/docker-containers.png` |
+| 10 | **MySQL Database** | Stored records and click events in MySQL 8 | `docs/screenshots/database-records.png` |
+| 11 | **Docker Orchestration** | Service telemetry, image footprint, and memory stats | `docs/screenshots/docker-orchestration.png` |
+| 12 | **Nginx Reverse Proxy** | Nginx config syntax, HTTP 302 routing, and access logs | `docs/screenshots/nginx-reverse-proxy.png` |
+
+---
+
+## 16. Results
 - **Full CRUD Verification**: Create, Read, Update, and Delete operations fully tested and functional across UI, API, and database.
 - **Container Build & Launch**: All 3 containers built and launched cleanly with 0 runtime errors.
 - **Health Checks**: Database, backend, and frontend containers achieved healthy status.
